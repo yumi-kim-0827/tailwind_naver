@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVER tailwind</title>
+    <!-- Latest Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS CDN -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="w-[1280px] mx-auto">
+        <!-- Header -->
+        <div class="relative px-0 ">
+            <!-- Header Top -->
+            <div class="flex justify-between">
+                <div class="flex gap-1">
+                    <div class="p-2 hover:bg-gray-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewbox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </div>
+                    <div class="p-2 hover:bg-gray-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-p-circle" viewbox="0 0 16 16">
+                            <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex gap-1">
+                    <div class="p-2 hover:bg-gray-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-chat-dots" viewbox="0 0 16 16">
+                            <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2" />
+                        </svg>
+                    </div>
+                    <div class="p-2 hover:bg-gray-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bell" viewbox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                        </svg>
+                    </div>
+                    <div class="p-2 hover:bg-gray-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28""
+                                fill=" currentColor" class="bi bi-bag-heart" viewbox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- Header 검색 영역 -->
+            <div class="p-4 mx-auto flex w-[48rem] justify-between items-center gap-4 border border-green-300 rounded-full hover:shadow-lg">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#6ee7b7" class="bi bi-emoji-smile-upside-down-fill" viewbox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5M4.285 6.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M10 8c-.552 0-1 .672-1 1.5s.448 1.5 1 1.5 1-.672 1-1.5S10.552 8 10 8" />
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <input type="text" class="p-1 w-full outline-none border-b focus:border-b focus:border-green-300 font-bold text-xl" />
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#6ee7b7" class="bi bi-search" viewbox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </div>
+            </div>
+            <!-- Header 검색 영역 -->
+            <div class="py-4 mx-auto flex flex-nowrap w-[48rem] justify-between items-center gap-4">
+                <ul class="flex justify-between items-center w-full gap-4">
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-envelope-open-fill" viewbox="0 0 16 16">
+                                <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765zM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M0 13.373l5.693-3.163L0 6.873z" /> </svg> </p>
+                        <p class="text-sm text-center">메일</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-cup-fill" viewbox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M.11 3.187A.5.5 0 0 1 .5 3h13a.5.5 0 0 1 .488.608l-.22.991a3.001 3.001 0 0 1-1.3 5.854l-.132.59A2.5 2.5 0 0 1 9.896 13H4.104a2.5 2.5 0 0 1-2.44-1.958L.012 3.608a.5.5 0 0 1 .098-.42Zm12.574 6.288a2 2 0 0 0 .866-3.899z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">카페</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-pencil-square" viewbox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">블로그</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg 0="0" 1="1" 2="2" 8="8" 16="16" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5
+                  class=" bi="bi" bi-bag-heart-fill" viewBox="
+                                    16">
+                                <path d="
+                                    m11.5=" M11.5" 4v-.5a3.5="4v-.5a3.5" 3.5="3.5" 0-7="0-7" 0v4h1v10a2="0V4H1v10a2" 2h10a2="2h10a2" 2-2v4zm8="2-2V4zM8" 1a2.5="1a2.5" 2.5="2.5" 2.5v4h-5v-.5a2.5="2.5V4h-5v-.5A2.5" 1m0="1m0" 6.993c1.664-1.711="6.993c1.664-1.711" 5.825="5.825" 1.283="1.283" 5.132-5.825-3.85-1.664-6.843="5.132-5.825-3.85-1.664-6.843" 0-5.132" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">쇼핑</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-newspaper" viewbox="0 0 16 16">
+                                <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+                                <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">뉴스</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-graph-up-arrow" viewbox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">증권</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-buildings-fill" viewbox="0 0 16 16">
+                                <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">부동산</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-geo-alt-fill" viewbox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">지도</p>
+                    </li>
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-journal-album" viewbox="0 0 16 16">
+                                <path d="M5.5 4a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5zm1 7a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z" />
+                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">웹툰</p>
+                    </li>
+                    <li class="self-start">
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 border border-gray-100 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4fdda5" class="bi bi-cup-fill" viewbox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M.11 3.187A.5.5 0 0 1 .5 3h13a.5.5 0 0 1 .488.608l-.22.991a3.001 3.001 0 0 1-1.3 5.854l-.132.59A2.5 2.5 0 0 1 9.896 13H4.104a2.5 2.5 0 0 1-2.44-1.958L.012 3.608a.5.5 0 0 1 .098-.42Zm12.574 6.288a2 2 0 0 0 .866-3.899z" />
+                            </svg>
+                        </p>
+                    </li>
+                </ul>
+                <span class="inline-block after:content-[''] after:inline-block after:w-[1px] after:h-[14px] after:bg-gray-300"></span>
+                <ul class="flex justify-between items-center w-full">
+                    <li>
+                        <p class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-300 border border-orange-400 hover:shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-envelope-open-fill" viewbox="0 0 16 16">
+                                <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765zM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M0 13.373l5.693-3.163L0 6.873z" />
+                            </svg>
+                        </p>
+                        <p class="text-sm text-center">광고</p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Header 오른쪽 광고 영역 -->
+            <div class="relative bottom-20 w-full h-[100px] overflow-hidden">
+                <img src="images/ad.png" alt="광고영역" class="absolute right-0 bottom-0 h-full object-fit" />
+            </div>
+        </div>
+        <!-- Header 끝 -->
+        <!-- content 시작 -->
+        <div class="flex gap-4">
+            <!-- content 왼쪽 시작 -->
+            <div class="basis-4/6 flex flex-col gap-4">
+                <div class="border border-zinc-7000 rounded-2xl shadow-lg shadow-slate-50 overflow-hidden">
+                    <img src="images/ad2.png" alt="광고영역" class="mx-auto object-cover" />
+                </div>
+
+                <div class="p-4 flex flex-col gap-2 border border-zinc-7000 rounded-2xl shadow-lg shadow-slate-50">
+
+                    <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                        <li class="nav-item flex items-center after:content-[''] after:inline-block after:w-[3px] after:h-[3px] after:bg-gray-300 after:rounded-full" role="presentation">
+                            <a class="nav-link active py-0 pl-0 pr-2 font-semibold text-neutral-400 border-0 bg-transparent hover:underline hover:text-neutral-400" id="news-tab" data-bs-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">뉴스스탠드</a>
+                        </li>
+                        <li class="nav-item flex items-center after:content-['/'] after:text-neutral-400" role="presentation">
+                            <a class="nav-link py-0 px-2 font-semibold text-neutral-400 border-0 bg-transparent hover:underline hover:text-neutral-400" id="public-tab" data-bs-toggle="tab" href="#public" role="tab" aria-controls="public" aria-selected="false">언론사편집</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link py-0 px-2 font-semibold text-neutral-400 border-0 bg-transparent hover:underline hover:text-neutral-400" id="enter-tab" data-bs-toggle="tab" href="#enter" role="tab" aria-controls="enter" aria-selected="false">엔터</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active text-sm" id="news" role="tabpanel" aria-labelledby="news-tab">
+                            <div class="mb-2 p-3 flex items-center gap-2 bg-gray-100 rounded">
+                                <button type="button" class="flex items-center gap-1 text-sm hover:underline " data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="<span class='text-xs'><strong>구독언론사</string> 보기</span>">
+                                    전체언론사
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                </button>
+                                <div class="flex items-center h-[22px] before:content-[''] before:inline-block before:w-[2px] before:h-[12px] before:bg-gray-300">
+                                    <div class="pl-2 swiper mySwiper myNewsSwiper w-full h-full">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide flex gap-2">
+                                                <p class="flex gap-2 justify-center items-center after:content-[''] after:inline-block after:w-[2px] after:h-[2px] after:bg-gray-300 text-sm">국제신문</p>
+                                                <span class="px-2 flex flex-col justify-center rounded-full border-1 border-red-700 bg-white font-bold text-red-700 text-xs">속보</span>
+                                                <p class="text-sm">고시엔 첫 우승…한국어 교가 日 전역 울려 퍼졌다</p>
+                                            </div>
+                                            <div class="swiper-slide flex gap-2">
+                                                <p class="flex gap-2 justify-center items-center after:content-[''] after:inline-block after:w-[2px] after:h-[2px] after:bg-gray-300 text-sm">오늘신문</p>
+                                                <span class="px-2 flex flex-col justify-center rounded-full border-1 border-teal-500 bg-white font-bold text-teal-500 text-xs">연예</span>
+                                                <p  class="text-sm">박명수도 인정한 인성 좋은 톱배우 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ml-auto font-bold">뉴스홈</div>
+                            </div>
+                            <div>
+                                <div id="tap1slide" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <ul class="grid grid-cols-6 border">
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news7.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news1.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news7.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news3.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                            </ul>
+                                        </div>
+                                        <div class="carousel-item ">
+                                            <ul class="grid grid-cols-6 border">
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news7.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news7.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-b"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news7.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news5.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news2.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center border-r"><img class="mx-auto" src="images/news6.png" alt="뉴스룸" /></li>
+                                                <li class="p-2 flex-1 flex flex-col justify-center h-[50px] text-center"><img class="mx-auto" src="images/news4.png" alt="뉴스룸" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative p-2 flex justify-center items-center gap-4 border-gray-100">
+                                    <button class="carousel-control-prev relative text-slate-800 w-[40px] h-[40px] rounded-full border border-gray-100 hover:text-slate-800 hover:shadow-md" type="button" data-bs-target="#tap1slide" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon flex flex-col justify-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left mx-auto" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                            </svg></span>
+                                    </button>
+                                    <p><strong class="text-blue-800">언론사</strong> 더보기</p>
+                                    <button class="carousel-control-next relative text-slate-800 w-[40px] h-[40px] rounded-full border border-gray-100 hover:text-slate-800 hover:shadow-md" type="button" data-bs-target="#tap1slide" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon flex flex-col justify-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right mx-auto" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="public" role="tabpanel" aria-labelledby="public-tab">
+                            <div class="mb-2 p-3 flex items-center gap-2 bg-gray-100 rounded">
+                                <button type="button" class="flex items-center gap-1 text-sm hover:underline " data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="<div class='flex justify-between items-center gap-2 text-xs'><p class='text-white'>신문보기</p><span class='inline-block w-[3px] h-[3px] bg-gray-50'></span><p class='text-white'>오피니언</p><span class='inline-block w-[3px] h-[3px] bg-gray-50'></span><p class='text-white'>랭킹</p><span class='inline-block w-[3px] h-[3px] bg-gray-50'></span><p class='text-white'>TV</p></div>">
+                                    분야별 뉴스
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                </button>
+                                <div class="flex items-center h-[22px] before:content-[''] before:inline-block before:w-[2px] before:h-[12px] before:bg-gray-300">
+                                    <div class="pl-2 swiper mySwiper myNewsSwiper w-full h-full">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide flex gap-2">
+                                                <p class="flex gap-2 justify-center items-center after:content-[''] after:inline-block after:w-[2px] after:h-[2px] after:bg-gray-300 text-sm">국제신문</p>
+                                                <span class="px-2 flex flex-col justify-center rounded-full border-1 border-red-700 bg-white font-bold text-red-700 text-xs">속보</span>
+                                                <p class="text-sm">고시엔 첫 우승…한국어 교가 日 전역 울려 퍼졌다</p>
+                                            </div>
+                                            <div class="swiper-slide flex gap-2">
+                                                <p class="flex gap-2 justify-center items-center after:content-[''] after:inline-block after:w-[2px] after:h-[2px] after:bg-gray-300 text-sm">오늘신문</p>
+                                                <span class="px-2 flex flex-col justify-center rounded-full border-1 border-teal-500 bg-white font-bold text-teal-500 text-xs">연예</span>
+                                                <p class="text-sm">박명수도 인정한 인성 좋은 톱배우 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ml-auto font-bold">뉴스홈</div>
+                            </div>
+                            <!-- // -->
+                            <div>
+                                <div id="tap2slide" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="grid grid-cols-2 gap-4">
+                                              <div class="flex gap-2 max-h-28">
+                                                <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                  <img class="object-fit w-full h-full absolute inset-0" src="images/thumb1.png" alt="뉴스썸네일" />
+                                                </div>
+                                                <div class="basis-2/3 flex flex-col justify-between">
+                                                  <div class="flex justify-between items-center gap-2">
+                                                    <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news1.png" alt="뉴스로고" />
+                                                    <p class="mr-auto text-sm font-bold">월간뉴스</p>
+                                                    <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                  </div>
+                                                  <div class="text-sm">“양배추는 위 점막에 좋아”... 혈전-암세포에는 어떤 변화가?</div>
+                                                  <span class="text-sm text-gray-500">8월 25일 16:23</span>
+                                                </div>
+                                              </div>
+                                              <div class="flex gap-2 max-h-28">
+                                                <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                  <img class="object-fit w-full h-full absolute inset-0" src="images/thumb2.png" alt="뉴스썸네일" />
+                                                </div>
+                                                <div class="basis-2/3 flex flex-col justify-between">
+                                                  <div class="flex justify-between items-center gap-2">
+                                                    <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news5.png" alt="뉴스로고" />
+                                                    <p class="mr-auto text-sm font-bold">뉴스</p>
+                                                    <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                  </div>
+                                                  <div class="text-sm">반려견도 명절 증후군? 서울 노원구 강아지는 호캉스 한다!</div>
+                                                  <span class="text-sm text-gray-500">8월 25일 16:23</span>
+                                                </div>
+                                              </div>
+                                              <div class="flex gap-2 max-h-28">
+                                                <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                  <img class="object-fit w-full h-full absolute inset-0" src="images/thumb3.png" alt="뉴스썸네일" />
+                                                </div>
+                                                <div class="basis-2/3 flex flex-col justify-between">
+                                                  <div class="flex justify-between items-center gap-2">
+                                                    <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news4.png" alt="뉴스로고" />
+                                                    <p class="mr-auto text-sm font-bold">FESTIVAL KOREA</p>
+                                                    <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                  </div>
+                                                  <div class="text-sm">'한여름 밤의 감성' 유성 재즈 페스티발</div>
+                                                  <span class="text-sm text-gray-500">10월 21일 16:23</span>
+                                                </div>
+                                              </div>
+                                              <div class="flex gap-2 max-h-28">
+                                                <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                  <img class="object-fit w-full h-full absolute inset-0" src="images/thumb4.png" alt="뉴스썸네일" />
+                                                </div>
+                                                <div class="basis-2/3 flex flex-col justify-between">
+                                                  <div class="flex justify-between items-center gap-2">
+                                                    <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news1.png" alt="뉴스로고" />
+                                                    <p class="mr-auto text-sm font-bold">서울뉴스</p>
+                                                    <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                  </div>
+                                                  <div class="text-sm">스파이더맨처럼 건물 벽 성큼성큼… 난간 매달린 아이</div>
+                                                  <span class="text-sm text-gray-500">4월 25일 2:56</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                          <div class="grid grid-cols-2 gap-4">
+                                            <div class="flex gap-2 max-h-28">
+                                              <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                <img class="object-fit w-full h-full absolute inset-0" src="images/thumb5.png" alt="뉴스썸네일" />
+                                              </div>
+                                              <div class="basis-2/3 flex flex-col justify-between">
+                                                <div class="flex justify-between items-center gap-2">
+                                                  <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news2.png" alt="뉴스로고" />
+                                                  <p class="mr-auto text-sm font-bold">Free NEWS</p>
+                                                  <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                </div>
+                                                <div class="text-sm">양질의 딸기 모종 생산 위한 병해충 예방 환경관리 철저히 해주세요!</div>
+                                                <span class="text-sm text-gray-500">1월 3일 16:23</span>
+                                              </div>
+                                            </div>
+                                            <div class="flex gap-2 max-h-28">
+                                              <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                <img class="object-fit w-full h-full absolute inset-0" src="images/thumb2.png" alt="뉴스썸네일" />
+                                              </div>
+                                              <div class="basis-2/3 flex flex-col justify-between">
+                                                <div class="flex justify-between items-center gap-2">
+                                                  <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news5.png" alt="뉴스로고" />
+                                                  <p class="mr-auto text-sm font-bold">뉴스</p>
+                                                  <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                </div>
+                                                <div class="text-sm">반려견도 명절 증후군? 서울 노원구 강아지는 호캉스 한다!</div>
+                                                <span class="text-sm text-gray-500">8월 25일 16:23</span>
+                                              </div>
+                                            </div>
+                                            <div class="flex gap-2 max-h-28">
+                                              <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                <img class="object-fit w-full h-full absolute inset-0" src="images/thumb3.png" alt="뉴스썸네일" />
+                                              </div>
+                                              <div class="basis-2/3 flex flex-col justify-between">
+                                                <div class="flex justify-between items-center gap-2">
+                                                  <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news4.png" alt="뉴스로고" />
+                                                  <p class="mr-auto text-sm font-bold">FESTIVAL KOREA</p>
+                                                  <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                </div>
+                                                <div class="text-sm">'한여름 밤의 감성' 유성 재즈 페스티발</div>
+                                                <span class="text-sm text-gray-500">10월 21일 16:23</span>
+                                              </div>
+                                            </div>
+                                            <div class="flex gap-2 max-h-28">
+                                              <div class="relative basis-1/3 rounded-sm overflow-hidden border">
+                                                <img class="object-fit w-full h-full absolute inset-0" src="images/thumb4.png" alt="뉴스썸네일" />
+                                              </div>
+                                              <div class="basis-2/3 flex flex-col justify-between">
+                                                <div class="flex justify-between items-center gap-2">
+                                                  <img class="w-[24px] h-[24px] rounded-full border border-gray-100 object-cover" src="images/news1.png" alt="뉴스로고" />
+                                                  <p class="mr-auto text-sm font-bold">서울뉴스</p>
+                                                  <button class="p-1 border border-blue-800 rounded-full text-sm text-blue-800 font-bold">구독 +</button>
+                                                </div>
+                                                <div class="text-sm">스파이더맨처럼 건물 벽 성큼성큼… 난간 매달린 아이</div>
+                                                <span class="text-sm text-gray-500">4월 25일 2:56</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="relative p-2 flex justify-center items-center gap-4 border-gray-100">
+                                    <button class="carousel-control-prev relative text-slate-800 w-[40px] h-[40px] rounded-full border border-gray-100 hover:text-slate-800 hover:shadow-md" type="button" data-bs-target="#tap2slide" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon flex flex-col justify-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left mx-auto" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                            </svg></span>
+                                    </button>
+                                    <p><strong class="text-blue-800">언론사</strong> 더보기</p>
+                                    <button class="carousel-control-next relative text-slate-800 w-[40px] h-[40px] rounded-full border border-gray-100 hover:text-slate-800 hover:shadow-md" type="button" data-bs-target="#tap2slide" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon flex flex-col justify-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right mx-auto" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- // -->
+
+                        </div>
+                        <div class="tab-pane fade" id="enter" role="tabpanel" aria-labelledby="enter-tab">
+                            enter
+                        </div>
+                    </div>
+                </div>
+                <!-- content 오른쪽 시작 -->
+                <div class="basis-2/6 flex flex-col gap-4">
+                    <div class="p-4 border border-zinc-7000 rounded-2xl shadow-lg shadow-slate-50 h-[500px]">
+                        <!-- Swiper -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest Bootstrap JS and dependencies CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // 페이지가 로드되면 툴팁을 활성화
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- index.js -->
+        <script src="js/index.js"></script>
+</body>
+
+</html>
