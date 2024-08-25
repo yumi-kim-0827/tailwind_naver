@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".myNewsSwiper", {
     direction: "vertical",
     autoplay: {
-      delay: 1000,
+      delay: 500,
       disableOnInteraction: false,
     },
   });
